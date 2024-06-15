@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="./styles/index.css">
+    <style>
+        .cart-navbar{
+            display: flex;
+            justify-content: space-around;
+            background-color: aqua;
+        }
+        button{
+            border: none;
+            background-color: yellow;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            border-radius: 0.5rem;
+            font-weight: bold;
+        }
+        .cart-container>div>button{
+            border-radius: 0.5rem;
+        }
+
+        .cart-container {
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            padding: 2rem;
+        }
+
+        .cart-container>div {
+            background-color: teal;
+            margin: 1rem;
+            text-align: center;
+            padding: 0.5rem;
+            border-radius: 8px;
+        }
+
+        h3,
+        p {
+            margin-bottom: 0.3rem;
+            color: #fff;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+            border-radius: 8px;
+            border: none;
+            margin-right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- after navbar -->
+    <div class="navbar">
+        <div class="inp">
+            <input type="text" id="searchInput" placeholder="Enter search query">
+  <button onclick="search()">Search</button>
+  <ul id="searchResults">
+  </ul>
+        </div>
+        <img src="./img/plogo.png" alt="">
+        <div class="icon">
+            <i class="fa-regular fa-heart"></i>
+            <a href="./login.html"><i class="fa-sharp fa-regular fa-face-smile"></i></a>
+            <a href="./cart.html"> <i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </div>
+
+    <nav>
+        <p style="color:black">SHOP CATEGORIES</p>
+        <p style="color:black">BRANDS</p>
+        <p style="color:black">OFFERS</p>
+        <p style="color:black">NEW</p>
+        <p style="color:black">SPLURGE</p>
+        <p style="color:black">MAGAZINE</p>
+        <p style="color:black">ELITE OFFERS</p>
+    </nav>
+
+    <!-- cart starts from here --->
+    <div class="cart-navbar">
+        <h2>Total Price - <span id="totalPriceSpan">0</span></h2>
+        <button id="payment_button">Payment Page</button>
+    </div>
+
+    <div class="cart-container"></div>
+</body>
+</html>
+<script src="./scripts/cart.js"></script>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <form action="">
+
+        <div class="row">
+
+            <div class="col">
+
+                <h3 class="title">billing address</h3>
+                <div class="inputBox">
+                    <span>full name :</span>
+                    <input type="text" placeholder="john deo">
+                </div>
+                <div class="inputBox">
+                    <span>email :</span>
+                    <input type="email" placeholder="example@example.com">
+                </div>
+                <div class="inputBox">
+                    <span>address :</span>
+                    <input type="text" placeholder="room - street - locality">
+                </div>
+                <div class="inputBox">
+                    <span>city :</span>
+                    <input type="text" placeholder="mumbai">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>state :</span>
+                        <input type="text" placeholder="india">
+                    </div>
+                    <div class="inputBox">
+                        <span>zip code :</span>
+                        <input type="text" placeholder="123 456">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col">
+
+                <h3 class="title">payment</h3>
+
+               <div class="inputBox">
+                    <span>cards accepted :</span>
+                    <img src="images/card_img.png" alt="">
+                </div>
+                <div class="inputBox">
+                    <span>name on card :</span>
+                    <input type="text" placeholder="mr. john deo">
+                </div>
+                <div class="inputBox">
+                    <span>credit card number :</span>
+                    <input type="number" placeholder="1111-2222-3333-4444">
+                </div>
+                <div class="inputBox">
+                    <span>exp month :</span>
+                    <input type="text" placeholder="january">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>exp year :</span>
+                        <input type="number" placeholder="2022">
+                    </div>
+                    <div class="inputBox">
+                        <span>CVV :</span>
+                        <input type="text" placeholder="1234">
+                    </div>
+                </div>
+
+            </div>
+    
+        </div>
+
+        <input type="submit" value="proceed to checkout" class="submit-btn">
+
+    </form>
+
+</div>    
+    
+</body>
+</html>
